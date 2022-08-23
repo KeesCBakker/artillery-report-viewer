@@ -17,7 +17,7 @@ const GraphReqLoad = () => {
     const rps_mean = [];
     intermediate.forEach((item) => {
       let d = new Date(item.timestamp.toString());
-      labels.push(d.toLocaleString());
+      labels.push(d.toLocaleTimeString());
       rps_count.push(item.rps.count);
       rps_mean.push(item.rps.mean);
     });

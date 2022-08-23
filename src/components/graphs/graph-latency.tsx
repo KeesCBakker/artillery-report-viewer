@@ -23,7 +23,7 @@ const GraphLatency = () => {
     const p99s = [];
     intermediate.forEach((item) => {
       let d = new Date(item.timestamp.toString());
-      labels.push(d.toLocaleString());
+      labels.push(d.toLocaleTimeString());
       min.push(item.latency.min);
       max.push(item.latency.max);
       median.push(item.latency.median);

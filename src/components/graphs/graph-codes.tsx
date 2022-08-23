@@ -24,7 +24,7 @@ const GraphCodes = () => {
     const servererrors = [];
     intermediate.forEach((item: ReportItem) => {
       let d = new Date(item.timestamp.toString());
-      labels.push(d.toLocaleString());
+      labels.push(d.toLocaleTimeString());
       let http100s = 0;
       let http200s = 0;
       let http300s = 0;
