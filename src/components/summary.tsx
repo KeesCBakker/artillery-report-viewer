@@ -185,38 +185,7 @@ const Summary = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-6">
-                    <div className="card card-stats">
-                        <div className="card-header card-header-secondary card-header-icon">
-                            <div className="card-icon">
-                                <i className="fas fa-file-medical-alt"></i>
-                            </div>
-                            <p className="card-category">Health &amp; Performance</p>
-                            <h3 className="card-title">
-                                {/* {isLoaded && 
-                                    `${getHealthyStatusText(healthRating)}`
-                                } */}
-                                Coming soon.
-                            </h3>
-                        </div>
-                        <div className="card-footer">
-                            <div className="stats">
-                                Estimated health and performance
-                            </div>
-                            {/* { isLoaded && 
-                                <span className="float-right">
-                                    <span className="stats pr-3">Overall Rating:</span>
-                                    {Array(getFilledStars()).fill(<i className="fas fa-star text-warning"></i>)}
-                                    {Array(getEmptyStars()).fill(<i className="far fa-star text-muted"></i>)}
-                                </span>
-                            } */}
-                            <span className="float-right">
-                                <span className="stats pr-3">Overall Rating:</span>
-                                {Array(getEmptyStars()).fill(<i className="far fa-star text-muted"></i>)}
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </Fragment>
     )

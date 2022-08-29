@@ -51,25 +51,17 @@ const _mapToLegacyBaseLevelObject = (src) => {
 };
 
 const _mapToLegacyLatency = (src_in) => {
-  var src = src_in.summaries;
-  var selector = "";
-  if (src["http.response_time"]) {
-    selector = "http.response_time";
-  } else if (src["engine.http.response_time"]) {
-    selector = "engine.http.response_time";
-  } else if (src["engine.http.socketio"]) {
-    selector = "engine.http.socketio";
-  } else {
-    throw new Error("Unable to Parse Latency");
-  }
+  const src = src_in.summaries;
+
+  const vals = src[Object.keys(src)[0]] || null;
 
   return {
-    min: src[selector].min || 0,
-    max: src[selector].max || 0,
-    median: src[selector].median || 0,
-    p50: src[selector].median || 0,
-    p95: src[selector].p95 || 0,
-    p99: src[selector].p99 || 0,
+    min: vals ? vals.min : 0,
+    max: vals ? vals.max : 0,
+    median: vals ? vals.median : 0,
+    p50: vals ? vals.median : 0,
+    p95: vals ? vals.p95 : 0,
+    p99: vals ? vals.p99 : 0,
   };
 };
 
